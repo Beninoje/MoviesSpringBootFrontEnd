@@ -1,11 +1,11 @@
-import { useMovies } from '@/hooks/useMovies'
+
 import { useUser } from '@clerk/clerk-react'
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import api from "../api/axiosConfig";
-type Props = {}
 
-const WishLists = (props: Props) => {
+
+const WishLists = () => {
   const { user } = useUser();
   const [wishlist, setWishlist] = useState<any[]>([]);
   useEffect(() => {
