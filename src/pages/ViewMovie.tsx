@@ -1,10 +1,10 @@
-import React from 'react'
+
 import { useParams } from 'react-router-dom'
 import { useMovies } from '../hooks/useMovies';
 
-type Props = {}
 
-const ViewMovie = (props: Props) => {
+
+const ViewMovie = () => {
     const {movieId} = useParams();
     const movieIdNumber = Number(movieId);
     const { movie, loading, error } = useMovies(undefined,movieIdNumber);

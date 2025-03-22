@@ -1,6 +1,6 @@
 import { BASE_API_URL } from '@/constants';
 import { Movie } from '@/types';
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import api from "../api/axiosConfig";
 

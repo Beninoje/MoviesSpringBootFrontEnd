@@ -3,7 +3,6 @@ import Home from './pages/Home'
 import ViewMovie from './pages/ViewMovie'
 import Header from './components/header/header'
 import WishLists from './pages/WishLists'
-import Find from './pages/Find'
 import SearchPage from './pages/SearchPage'
 
 function App() {

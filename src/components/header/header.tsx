@@ -1,16 +1,16 @@
 import { SignedIn, SignedOut, SignInButton, UserButton, useUser } from '@clerk/clerk-react'
 import { Search } from 'lucide-react'
-import React, { useEffect, useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { Link, useLocation, useNavigate } from 'react-router-dom'
 import { Button } from '../ui/button'
 import api from "../../api/axiosConfig";
 import { BASE_API_URL } from '@/constants'
 import { Movie } from '@/types'
-type Props = {}
 
-const Header = (props: Props) => {
+
+const Header = () => {
   const { user } = useUser();
-  const [isRegistered, setIsRegistered] = useState(false);
+  const [isRegistered,setIsRegistered] = useState(false);
   const location = useLocation();
   const [searchInput, setSearchInput] = useState("");
   const [searchResults,setSearchResults] = useState<Movie[]>([]);
