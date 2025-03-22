@@ -11,7 +11,7 @@ const WishLists = (props: Props) => {
   useEffect(() => {
       const fetchWishlist = async () => {
         try {
-          const response = await api.get(`http://localhost:8080/api/v1/users/wishlist?clerkId=${user!.id}`);
+          const response = await api.get(`http://movies-springboot-api-env.eba-bus5biay.us-east-2.elasticbeanstalk.com/api/v1/users/wishlist?clerkId=${user!.id}`);
           if (response.status === 200) {
             setWishlist(response.data);
           }

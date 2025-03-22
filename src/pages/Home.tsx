@@ -16,6 +16,7 @@ import api from "../api/axiosConfig";
 import { toast } from "sonner"
 import { useUser } from "@clerk/clerk-react";
 import { Movie } from "@/types";
+import { BASE_API_URL } from "@/constants";
 
 
 const Home = () => {
@@ -33,7 +34,7 @@ const Home = () => {
 
   const fetchWishlist = async (clerkId:string) => {
     try {
-      const response = await api.get(`http://localhost:8080/api/v1/users/wishlist?clerkId=${clerkId}`);
+      const response = await api.get(`${BASE_API_URL}/users/wishlist?clerkId=${clerkId}`);
       if (response.status === 200) {
         // Map movie IDs to true to represent that they are in the wishlist
         const wishlistMap = new Map();
