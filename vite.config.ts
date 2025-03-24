@@ -18,17 +18,16 @@ export default defineConfig({
       usePolling: true,
     },
   },
-  base:"/MoviesSpringBootFrontEnd/",
+  base:"/",
   build: {
-    // Minimize output errors
-    sourcemap: false, // Disable source maps (they can sometimes cause issues)
+    outDir: "dist",
+    sourcemap: false,
     rollupOptions: {
       onwarn(warning, warn) {
-        // Ignore specific warning types if needed
         if (warning.code === 'UNUSED_EXTERNAL_IMPORT') {
-          return; // Ignore unused external import warnings
+          return; 
         }
-        warn(warning); // Otherwise, log the warning
+        warn(warning); 
       },
     },
   },
