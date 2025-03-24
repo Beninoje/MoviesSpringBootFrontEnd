@@ -18,7 +18,7 @@ export default defineConfig({
       usePolling: true,
     },
   },
-  base:"/MoviesSpringBootFrontEnd",
+  base:"/MoviesSpringBootFrontEnd/",
   build: {
     // Minimize output errors
     sourcemap: false, // Disable source maps (they can sometimes cause issues)
